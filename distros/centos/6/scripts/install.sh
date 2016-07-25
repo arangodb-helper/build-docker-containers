@@ -17,8 +17,8 @@ yum -y install tar wget bzip2 git cmake automake autoconf
 # scl enable devtoolset-3 bash
 
 cd /etc/yum.repos.d; wget http://download.opensuse.org/repositories/home:/fceller2/CentOS_CentOS-6/home:fceller2.repo
-yum -y install arangodb-gcc54-5.4.0 arangodb-jemalloc-devel
+yum -y install arangodb-gcc54-5.4.0 arangodb-jemalloc-devel glibc-devel
 
 
-echo 'PATH=${PATH}:/opt/arangodb/bin/' >> /etc/bashrc
-echo 'PATH=${PATH}:/opt/arangodb/bin/' >> /etc/profile
+echo 'PATH=/opt/arangodb/bin/:${PATH}' >> /etc/bashrc
+echo 'PATH=/opt/arangodb/bin/:${PATH}' >> /etc/profile
