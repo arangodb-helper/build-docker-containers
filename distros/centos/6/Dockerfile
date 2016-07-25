@@ -14,3 +14,5 @@ RUN bash -x ./scripts/install.sh
 
 # expose the build directory
 VOLUME ["/home/jenkins"]
+
+
