@@ -1,0 +1,18 @@
+FROM centos:6.6
+MAINTAINER Wilfried Goesgens <willi@arangodb.com>
+
+ARG HTTP_PROXY
+# for local installation, uncomment
+# ADD ./arangodb /install
+
+# add scripts to install the compiler toolchain
+ADD ./scripts /scripts
+
+RUN ls -l /scripts/
+# install the build tools
+RUN bash -x ./scripts/install.sh
+
+# expose the build directory
+VOLUME ["/home/jenkins"]
+
+
