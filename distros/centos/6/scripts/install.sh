@@ -11,7 +11,14 @@ yum -y install tar wget bzip2 git cmake automake autoconf
 
 # get the latest gcc:
 # https://www.softwarecollections.org/en/scls/rhscl/devtoolset-3/
-yum -y install centos-release-scl
-yum -y --nogpgcheck install devtoolset-3-gcc devtoolset-3-gcc-c++
-echo "running scl enable: "
-scl enable devtoolset-3 bash
+#yum -y install centos-release-scl
+#yum -y --nogpgcheck install devtoolset-3-gcc devtoolset-3-gcc-c++
+# echo "running scl enable: "
+# scl enable devtoolset-3 bash
+
+cd /etc/yum.repos.d; wget http://download.opensuse.org/repositories/home:/fceller2/CentOS_CentOS-6/home:fceller2.repo
+yum -y install arangodb-gcc54-5.4.0 arangodb-jemalloc-devel
+
+
+echo 'PATH=${PATH}:/opt/arangodb/bin/' >> /etc/bashrc
+echo 'PATH=${PATH}:/opt/arangodb/bin/' >> /etc/profile
