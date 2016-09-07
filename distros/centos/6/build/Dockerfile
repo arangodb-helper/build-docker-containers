@@ -1,7 +1,7 @@
 FROM centos:6.6
 MAINTAINER Wilfried Goesgens <willi@arangodb.com>
 
-ARG HTTP_PROXY
+# ARG HTTP_PROXY
 # for local installation, uncomment
 # ADD ./arangodb /install
 
