@@ -2,7 +2,7 @@
 
 FROM mesosphere/jenkins-dind:0.3.1
 RUN mkdir -p /etc/privateregistry/certs
-COPY domain.crt /etc/privateregistry/certs
-COPY domain.key /etc/privateregistry/certs
+COPY domain.crt /etc/privateregistry/certs/domain.crt
+COPY domain.key /etc/privateregistry/certs/domain.key
 RUN mkdir -p /etc/docker/certs.d/192.168.0.1/
 COPY domain.crt /etc/docker/certs.d/192.168.0.1/ca.cert
