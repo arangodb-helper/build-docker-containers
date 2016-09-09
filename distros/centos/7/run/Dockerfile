@@ -12,7 +12,9 @@ RUN ls -l /scripts/
 # install the build tools
 RUN bash -x ./scripts/install.sh
 
-# expose the build directory
-VOLUME ["/home/jenkins"]
+# expose the build directory:
+VOLUME ["/jenkins"]
 
+# expose shared storage:
+VOLUME ["/net/fileserver"]
 
