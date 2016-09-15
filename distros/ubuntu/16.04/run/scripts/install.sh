@@ -13,7 +13,7 @@ apt-get install -y \
         git cmake automake autoconf \
         libjemalloc1 openssl \
         \
-        ruby-rspec ruby-rspec-core ruby-rspec-mocks ruby-rspec-expectations ruby-httparty \
+        ruby-httparty \
         ruby-multi-xml ruby-thread-safe rubygems-integration ruby-diff-lcs ri ruby-rgen
 
 gem install bundler
