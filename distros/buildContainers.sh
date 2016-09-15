@@ -31,7 +31,7 @@ for distro in *; do
             continue
         fi
         LABEL=`cat $WD/$distro/$distroversion/LABEL`
-        if test -n "$LABEL_FILTER" -a "$LABEL_FILTER" != "${LABEL}"
+        if test -n "$LABEL_FILTER" -a "$LABEL_FILTER" != "${LABEL}"; then
            echo "skipping ${LABEL}"
            continue
         fi
