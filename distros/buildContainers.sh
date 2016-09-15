@@ -17,6 +17,8 @@ function buildAndPushContainer() {
 }
 
 WD=`pwd`
+DOCKER_REGISTRY=$1
+LABEL_FILTER=$2
 
 for distro in *; do
     if test "$distro" == '.' -o "$distro" == '..' -o "$distro" == "buildContainers.sh"; then
@@ -29,7 +31,11 @@ for distro in *; do
             continue
         fi
         LABEL=`cat $WD/$distro/$distroversion/LABEL`
-        buildAndPushContainer $1 ${LABEL} "$distro/$distroversion" build
-        buildAndPushContainer $1 ${LABEL} "$distro/$distroversion" run
+        if test -n "$LABEL_FILTER" -a "$LABEL_FILTER" != "${LABEL}"
+           echo "skipping ${LABEL}"
+           continue
+        fi
+        buildAndPushContainer ${DOCKER_REGISTRY} ${LABEL} "$distro/$distroversion" build
+        buildAndPushContainer ${DOCKER_REGISTRY} ${LABEL} "$distro/$distroversion" run
     done
 done
