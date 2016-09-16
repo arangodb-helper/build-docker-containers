@@ -32,7 +32,7 @@ try:
     remoteMD5=md5File.read()
     md5File.close()
 except exception as x:
-    continue
+    pass
 
 if remoteMD5 != my_md5sum:
     print("Copying file: %s -> %s\n" % (my_sourcefile, my_destfile))
