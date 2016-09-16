@@ -31,7 +31,7 @@ try:
     md5File=open(my_destfile + '.md5', 'r')
     remoteMD5=md5File.read()
     md5File.close()
-except exception as x:
+except:
     pass
 
 if remoteMD5 != my_md5sum:
