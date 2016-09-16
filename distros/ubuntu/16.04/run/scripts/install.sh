@@ -12,6 +12,7 @@ apt-get install -y \
         build-essential apt-utils apt-transport-https \
         git cmake automake autoconf \
         libjemalloc1 openssl \
+        python-lockfile \
         \
         ruby-httparty \
         ruby-multi-xml ruby-thread-safe rubygems-integration ruby-diff-lcs ri ruby-rgen

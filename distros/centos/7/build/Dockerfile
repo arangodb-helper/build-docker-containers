@@ -5,6 +5,8 @@ MAINTAINER Wilfried Goesgens <willi@arangodb.com>
 # for local installation, uncomment
 # ADD ./arangodb /install
 
+COPY ./scripts/copyFileLockedIfNewer.py /usr/bin/
+
 # add scripts to install the compiler toolchain
 ADD ./scripts /scripts
 
