@@ -5,14 +5,12 @@ function buildAndPushContainer() {
     REGISTRY=$1
     LABEL=$2
     DIRECTORY=$3
-    BUILDNRUN=$4
     
-    docker build -t ${LABEL}/${BUILDNRUN} 
+    docker build -t ${LABEL} ${DIRECTORY}
 
-    docker tag -f ${LABEL}/${BUILDNRUN} ${REGISTRY}/${LABEL}/${BUILDNRUN}
+    docker tag -f ${LABEL}/ ${REGISTRY}/${LABEL}
 
-
-    docker push ${REGISTRY}/${LABEL}/${BUILDNRUN}
+    docker push ${REGISTRY}/${LABEL}
 
 }
 
@@ -20,5 +18,5 @@ WD=`pwd`
 DOCKER_REGISTRY=$1
 
 for distro in mesospherejenkins; do
-    buildAndPushContainer ${DOCKER_REGISTRY} $distro "arangodb/$distro" $distro
+    buildAndPushContainer ${DOCKER_REGISTRY} "arangodb/$distro" $distro
 done
