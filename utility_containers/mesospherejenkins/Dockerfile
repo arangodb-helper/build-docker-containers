@@ -13,9 +13,9 @@ RUN curl -fSL "https://${DOCKER_BUCKET}/builds/Linux/x86_64/docker-$DOCKER_VERSI
         && echo "${DOCKER_SHA256}  /usr/local/bin/docker" | sha256sum -c - \
         && chmod +x /usr/local/bin/docker
 
-COPY docker-entrypoint.sh /usr/local/bin/
+# COPY docker-entrypoint.sh /usr/local/bin/
 
-ENTRYPOINT ["docker-entrypoint.sh"]
+# ENTRYPOINT ["docker-entrypoint.sh"]
 CMD ["sh"]
 #################################################################################
 # since DIND is not available in the version we need, ^^^ is copied from https://github.com/docker-library/docker
