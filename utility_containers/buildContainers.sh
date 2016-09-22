@@ -8,7 +8,7 @@ function buildAndPushContainer() {
     
     docker build -t ${LABEL} ${DIRECTORY}
 
-    docker tag -f ${LABEL}/ ${REGISTRY}/${LABEL}
+    docker tag -f ${LABEL} ${REGISTRY}/${LABEL}
 
     docker push ${REGISTRY}/${LABEL}
 
