@@ -12,10 +12,12 @@ apt-get install -y \
         build-essential apt-utils apt-transport-https \
         git cmake automake autoconf \
         libjemalloc1 openssl \
-        python-lockfile \
-        \
+        python-pip \
         ruby-httparty \
         ruby-multi-xml ruby-thread-safe rubygems-integration ruby-diff-lcs ri ruby-rgen
+
+
+pip install lockfile
 
 gem install bundler
 wget https://raw.githubusercontent.com/arangodb/arangodb/devel/UnitTests/HttpInterface/Gemfile

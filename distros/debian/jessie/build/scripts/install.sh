@@ -7,7 +7,9 @@ fi
 
 echo "proxy=${HTTP_PROXY}"
 apt-get update
-apt-get install -y tar wget bzip2 git cmake automake autoconf python-argparse build-essential apt-utils apt-transport-https debhelper libjemalloc-dev libssl-dev python python-lockfile
+apt-get install -y tar wget bzip2 git cmake automake autoconf python-argparse build-essential apt-utils apt-transport-https debhelper libjemalloc-dev libssl-dev python python-pip
+
+pip install lockfile
 
 cd /tmp/
 wget http://download.opensuse.org/repositories/home:/fceller2/Debian_8.0//Release.key
