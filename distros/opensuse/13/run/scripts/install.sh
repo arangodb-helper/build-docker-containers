@@ -7,12 +7,23 @@ fi
 
 echo "proxy=${HTTP_PROXY}"
 # install the bare arangodb dependencies:
-zypper -n install -y install tar bzip2 openssl wget
+zypper -n install -y tar bzip2 openssl wget ruby
 
-wget http://download.opensuse.org/repositories/home:/fceller2/openSUSE_13.1/repodata/repomd.xml.key
 
-rpm --import repomd.xml.key
+#wget http://download.opensuse.org/repositories/home:/fceller2/openSUSE_13.1/repodata/repomd.xml.key
+
+#rpm --import repomd.xml.key
 
 zypper addrepo http://download.opensuse.org/repositories/home:/fceller2/openSUSE_13.1/home:fceller2.repo
+zypper -n --gpg-auto-import-keys ref -s
+zypper refresh
 
-zypper -n install arangodb-jemalloc rspec
+zypper -n install arangodb-jemalloc
+
+gem install bundler
+
+wget --no-check-certificate https://raw.githubusercontent.com/arangodb/arangodb/devel/UnitTests/HttpInterface/Gemfile
+bundle2.0
+
+echo 'PATH=/opt/arangodb/bin/:${PATH}' >> /etc/bashrc
+echo 'PATH=/opt/arangodb/bin/:${PATH}' >> /etc/profile
