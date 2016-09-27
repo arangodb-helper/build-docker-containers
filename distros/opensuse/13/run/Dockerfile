@@ -22,3 +22,6 @@ VOLUME ["/jenkins"]
 RUN mkdir -p /net/fileserver
 VOLUME ["/net/fileserver"]
 
+# Opensuse doesn't provide /etc/issue so we create it...
+RUN echo "openSuSE 13.1" > /etc/issue
+
