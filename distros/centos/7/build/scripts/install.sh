@@ -7,7 +7,7 @@ fi
 
 echo "proxy=${HTTP_PROXY}"
 cat /etc/yum.conf
-yum -y install tar wget bzip2 git cmake automake autoconf python-argparse 
+yum -y install tar wget bzip2 git cmake make automake autoconf python-argparse 
 
 # get the latest gcc:
 # https://www.softwarecollections.org/en/scls/rhscl/devtoolset-3/
