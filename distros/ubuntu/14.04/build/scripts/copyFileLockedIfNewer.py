@@ -1,13 +1,25 @@
 #!/usr/bin/python
+
+# tested with:
+# tar -cvzf /tmp/test.tar.gz etc/
+# md5sum /tmp/test.tar.gz -> 36ac61ca0ca8c7375be464058fd8f3e6
+# ./copyFileLockedIfNewer.py  36ac61ca0ca8c7375be464058fd8f3e6  /tmp/test.tar.gz  /var/tmp/tst /var/tmp/this.tar.gz "mkdir /var/tmp/blarg; cd /var/tmp/blarg; tar -xvzf /var/tmp/this.tar.gz"; find /var/tmp/blarg 
+
 from lockfile import LockFile, LockTimeout
 from shutil import copy
 import sys
+from subprocess import call
 
 my_md5sum=sys.argv[1]
 my_sourcefile=sys.argv[2]
 my_lockfile=sys.argv[3]
 my_destfile=sys.argv[4]
+have_command = False
+if (len(sys.argv) > 5):
+    have_command = True
+    command = sys.argv[5]
 
+    print "running: call([\"bash\", \"-c\", \"'\" + command + '\"'])\n"
 
 #print("my_md5sum: %s my_sourcefile: %s my_lockfile: %s my_destfile: %s" %(
 #    my_md5sum,
@@ -39,6 +51,10 @@ if remoteMD5 != my_md5sum:
     copy(my_sourcefile, my_destfile)
     md5File=open(my_destfile + '.md5', 'w')
     md5File.write(my_md5sum)
+
+    if have_command:
+        call(["bash", "-c", command])
+
 else:
     print("File md5 sums match, not copying.\n")
 
