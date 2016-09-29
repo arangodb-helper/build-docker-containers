@@ -7,7 +7,7 @@ fi
 
 echo "proxy=${HTTP_PROXY}"
 zypper refresh
-zypper -n install tar wget bzip2 git cmake automake autoconf python-argparse 
+zypper -n install tar wget bzip2 git cmake automake autoconf python-argparse ca-certificates-mozilla
 
 zypper -n addrepo http://download.opensuse.org/repositories/home:/fceller2/openSUSE_13.1/home:fceller2.repo
 
