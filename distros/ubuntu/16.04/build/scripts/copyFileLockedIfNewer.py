@@ -19,8 +19,6 @@ if (len(sys.argv) > 5):
     have_command = True
     command = sys.argv[5]
 
-    print "running: call([\"bash\", \"-c\", \"'\" + command + '\"'])\n"
-
 #print("my_md5sum: %s my_sourcefile: %s my_lockfile: %s my_destfile: %s" %(
 #    my_md5sum,
 #    my_sourcefile,
@@ -32,7 +30,7 @@ print("waiting for lock: \n")
 lock = LockFile(my_lockfile)
 while not lock.i_am_locking():
     try:
-        lock.acquire(timeout=600)    # wait up to 10 Minutes
+        lock.acquire(timeout=6000)    # wait up to 100 Minutes
     except LockTimeout:
         lock.break_lock()
         lock.acquire()
@@ -53,6 +51,7 @@ if remoteMD5 != my_md5sum:
     md5File.write(my_md5sum)
 
     if have_command:
+        print "running: call([\"bash\", \"-c\", \"'" + command + "'\"'])\n"
         call(["bash", "-c", command])
 
 else:
