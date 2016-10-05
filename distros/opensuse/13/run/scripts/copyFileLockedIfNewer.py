@@ -31,7 +31,7 @@ print(my_jobname + ": waiting for lock: \n")
 lock = LockFile(my_lockfile)
 while not lock.i_am_locking():
     try:
-        lock.acquire(timeout=6000)    # wait up to 100 Minutes
+        lock.acquire(timeout=600)    # wait up to 10 Minutes
     except LockTimeout:
         print(my_jobname + ": lock timed out!\n")
         lock.break_lock()
@@ -39,7 +39,7 @@ while not lock.i_am_locking():
 
 print(my_jobname + ": Got lock: %s\n" % lock.path)
 remoteMD5=""
-try: 
+try:
     md5File=open(my_destfile + '.md5', 'r')
     remoteMD5=md5File.read()
     md5File.close()
@@ -55,7 +55,6 @@ if remoteMD5 != my_md5sum:
     if have_command:
         print my_jobname + ": running: call([\"bash\", \"-c\", \"'" + command + "'\"'])\n"
         call(["bash", "-c", command])
-
 else:
     print(my_jobname + ": File md5 sums match, not copying.\n")
 
