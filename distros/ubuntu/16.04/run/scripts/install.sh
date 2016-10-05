@@ -14,6 +14,8 @@ apt-get install -y \
         libjemalloc1 openssl \
         python-lockfile \
         \
+        gdb \
+        \
         ruby-httparty \
         ruby-multi-xml ruby-thread-safe rubygems-integration ruby-diff-lcs ri ruby-rgen
 
