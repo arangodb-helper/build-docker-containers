@@ -16,7 +16,7 @@ rpm --import repomd.xml.key
 
 
 zypper -n refresh
-zypper -n install arangodb-gcc54-5.4.0 arangodb-jemalloc-devel glibc-devel openssl-devel rpm-build
+zypper -n install arangodb-gcc54-5.4.0 arangodb-jemalloc-devel arangodb-jemalloc-devel-static glibc-devel openssl-devel rpm-build
 
 
 echo 'PATH=/opt/arangodb/bin/:${PATH}' >> /etc/bashrc

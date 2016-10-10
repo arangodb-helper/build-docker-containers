@@ -7,7 +7,7 @@ fi
 
 echo "proxy=${HTTP_PROXY}"
 cat /etc/yum.conf
-yum -y install tar wget bzip2 git cmake make automake autoconf python-argparse 
+yum -y install tar wget bzip2 git cmake make automake autoconf python-argparse openssl-devel rpm-build
 
 # get the latest gcc:
 # https://www.softwarecollections.org/en/scls/rhscl/devtoolset-3/
@@ -17,7 +17,7 @@ yum -y install tar wget bzip2 git cmake make automake autoconf python-argparse
 # scl enable devtoolset-3 bash
 
 cd /etc/yum.repos.d; wget http://download.opensuse.org/repositories/home:/fceller2/CentOS_CentOS-6/home:fceller2.repo
-yum -y install arangodb-gcc54-5.4.0 arangodb-jemalloc-devel glibc-devel openssl-devel rpm-build
+yum -y install arangodb-gcc54-5.4.0 arangodb-jemalloc-devel arangodb-jemalloc-devel-static glibc-devel
 
 
 echo 'PATH=/opt/arangodb/bin/:${PATH}' >> /etc/bashrc
