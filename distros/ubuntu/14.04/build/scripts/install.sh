@@ -6,7 +6,7 @@ if test -n "${HTTP_PROXY}"; then
 fi
 
 echo "proxy=${HTTP_PROXY}"
-apt-get install software-properties-common
+#apt-get install software-properties-common
 add-apt-repository ppa:george-edison55/cmake-3.x
 
 apt-get update
