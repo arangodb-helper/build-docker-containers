@@ -6,6 +6,9 @@ if test -n "${HTTP_PROXY}"; then
 fi
 
 echo "proxy=${HTTP_PROXY}"
+apt-get install software-properties-common
+add-apt-repository ppa:george-edison55/cmake-3.x
+
 apt-get update
 apt-get install -y tar wget bzip2 git cmake automake autoconf python-argparse build-essential apt-utils apt-transport-https debhelper libjemalloc-dev libssl-dev python2.7
 
