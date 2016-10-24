@@ -25,5 +25,7 @@ gem install bundler
 wget --no-check-certificate https://raw.githubusercontent.com/arangodb/arangodb/devel/UnitTests/HttpInterface/Gemfile
 bundle2.0
 
+useradd jenkins
+
 echo 'PATH=/opt/arangodb/bin/:${PATH}' >> /etc/bashrc
 echo 'PATH=/opt/arangodb/bin/:${PATH}' >> /etc/profile

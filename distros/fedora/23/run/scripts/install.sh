@@ -12,3 +12,5 @@ dnf -y install tar bzip2 openssl wget
 
 mkdir -p /etc/yum.repos.d; cd /etc/yum.repos.d; wget http://download.opensuse.org/repositories/home:/fceller2/CentOS_CentOS-6/home:fceller2.repo
 dnf -y install rubygem-rspec-rails
+
+useradd jenkins

@@ -20,5 +20,7 @@ mkdir -p /etc/yum.repos.d; cd /etc/yum.repos.d; wget http://download.opensuse.or
 dnf -y install arangodb-gcc54-5.4.0 arangodb-jemalloc-devel arangodb-jemalloc-devel-static glibc-devel
 
 
+useradd jenkins
+
 echo 'PATH=/opt/arangodb/bin/:${PATH}' >> /etc/bashrc
 echo 'PATH=/opt/arangodb/bin/:${PATH}' >> /etc/profile

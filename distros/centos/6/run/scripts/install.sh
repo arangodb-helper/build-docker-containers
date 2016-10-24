@@ -12,3 +12,6 @@ yum -y install tar bzip2 openssl wget
 
 cd /etc/yum.repos.d; wget http://download.opensuse.org/repositories/home:/fceller2/CentOS_CentOS-6/home:fceller2.repo
 yum -y install arangodb-jemalloc rspec
+
+
+useradd jenkins

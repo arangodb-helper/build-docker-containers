@@ -20,5 +20,7 @@ cd /etc/yum.repos.d; wget http://download.opensuse.org/repositories/home:/fcelle
 yum -y install arangodb-gcc54-5.4.0 arangodb-jemalloc-devel arangodb-jemalloc-devel-static glibc-devel python-argparse openssl-devel rpm-build
 
 
+useradd jenkins
+
 echo 'PATH=/opt/arangodb/bin/:${PATH}' >> /etc/bashrc
 echo 'PATH=/opt/arangodb/bin/:${PATH}' >> /etc/profile
