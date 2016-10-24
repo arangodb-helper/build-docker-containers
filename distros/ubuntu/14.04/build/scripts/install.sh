@@ -18,7 +18,7 @@ echo 'deb http://download.opensuse.org/repositories/home:/fceller2/xUbuntu_14.04
 apt-get update
 apt-get install -y arangodb-gcc54
 
-useradd jenkins
+useradd jenkins -u 1000
 
 echo 'PATH=/opt/arangodb/bin/:${PATH}' >> /etc/bashrc
 echo 'PATH=/opt/arangodb/bin/:${PATH}' >> /etc/profile

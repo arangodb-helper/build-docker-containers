@@ -19,7 +19,7 @@ yum -y install tar wget bzip2 git cmake make automake autoconf python-argparse o
 cd /etc/yum.repos.d; wget http://download.opensuse.org/repositories/home:/fceller2/CentOS_CentOS-6/home:fceller2.repo
 yum -y install arangodb-gcc54-5.4.0 arangodb-jemalloc-devel arangodb-jemalloc-devel-static glibc-devel
 
-useradd jenkins
+useradd jenkins -u 1000
 
 echo 'PATH=/opt/arangodb/bin/:${PATH}' >> /etc/bashrc
 echo 'PATH=/opt/arangodb/bin/:${PATH}' >> /etc/profile

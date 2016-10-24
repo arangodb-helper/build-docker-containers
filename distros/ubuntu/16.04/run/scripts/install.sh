@@ -23,7 +23,7 @@ gem install bundler
 wget https://raw.githubusercontent.com/arangodb/arangodb/devel/UnitTests/HttpInterface/Gemfile
 bundle
 
-useradd jenkins
+useradd jenkins -u 1000
 
 echo 'PATH=/opt/arangodb/bin/:${PATH}' >> /etc/bashrc
 echo 'PATH=/opt/arangodb/bin/:${PATH}' >> /etc/profile
