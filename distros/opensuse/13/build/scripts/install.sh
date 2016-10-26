@@ -15,6 +15,7 @@ zypper -n addrepo http://download.opensuse.org/repositories/home:/dothebart:/bra
 
 wget http://download.opensuse.org/repositories/home:/fceller2/openSUSE_13.1/repodata/repomd.xml.key
 rpm --import repomd.xml.key
+rm -f repomd.xml.key
 # cmake:
 wget http://download.opensuse.org/repositories/home:/dothebart:/branches:/devel:/tools:/building/openSUSE_13.2/repodata/repomd.xml.key
 rpm --import repomd.xml.key
