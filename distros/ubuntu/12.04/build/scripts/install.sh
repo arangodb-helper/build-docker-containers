@@ -21,7 +21,7 @@ wget http://download.opensuse.org/repositories/home:/fceller2/xUbuntu_14.04/Rele
 apt-key add - < Release.key
 rm Release.key
 
-echo 'deb http://download.opensuse.org/repositories/home:/fceller2/xUbuntu_14.04/ /' | tee /etc/apt/sources.list.d/arangodbbuild.list
+echo 'deb http://download.opensuse.org/repositories/home:/fceller2/xUbuntu_12.04/ /' | tee /etc/apt/sources.list.d/arangodbbuild.list
 apt-get update
 apt-get install -y arangodb-gcc54
 
