@@ -22,3 +22,4 @@ VOLUME ["/jenkins"]
 RUN mkdir -p /net/fileserver
 VOLUME ["/net/fileserver"]
 
+CMD while /bin/true; do echo '.'; sleep1; done
