@@ -16,9 +16,6 @@ wget http://download.opensuse.org/repositories/home:/fceller2/Debian_8.0//Releas
 apt-key add - < Release.key
 rm Release.key
 
-
-http://download.opensuse.org/repositories/home:/dothebart:/branches:/devel:/tools:/building/ /home:dothebart:branches:devel:tools:building.repo
-
 echo 'deb http://ftp.debian.org/debian jessie-backports main' | tee /etc/apt/sources.list.d/backports.list
 echo 'deb http://download.opensuse.org/repositories/home:/fceller2/Debian_8.0/ /' | tee /etc/apt/sources.list.d/arangodbbuild.list
 apt-get update
