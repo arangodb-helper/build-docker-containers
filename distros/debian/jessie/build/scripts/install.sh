@@ -23,7 +23,8 @@ echo 'deb http://ftp.debian.org/debian jessie-backports main' | tee /etc/apt/sou
 echo 'deb http://download.opensuse.org/repositories/home:/fceller2/Debian_8.0/ /' | tee /etc/apt/sources.list.d/arangodbbuild.list
 apt-get update
 apt-get install -y arangodb-gcc54 
-apt-get -t jessie-backports install git cmake 
+apt-get -t jessie-backports install -y git
+apt-get -t jessie-backports install -y cmake 
 
 useradd jenkins -u 1000
 
