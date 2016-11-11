@@ -22,7 +22,8 @@ http://download.opensuse.org/repositories/home:/dothebart:/branches:/devel:/tool
 echo 'deb http://ftp.debian.org/debian jessie-backports main' | tee /etc/apt/sources.list.d/backports.list
 echo 'deb http://download.opensuse.org/repositories/home:/fceller2/Debian_8.0/ /' | tee /etc/apt/sources.list.d/arangodbbuild.list
 apt-get update
-apt-get install -y arangodb-gcc54 git cmake 
+apt-get install -y arangodb-gcc54 
+apt-get -t jessie-backports install git cmake 
 
 useradd jenkins -u 1000
 
