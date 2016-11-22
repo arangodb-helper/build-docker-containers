@@ -16,7 +16,9 @@ yum -y install tar wget bzip2 git automake autoconf
 # echo "running scl enable: "
 # scl enable devtoolset-3 bash
 
-cd /etc/yum.repos.d; wget http://download.opensuse.org/repositories/home:/fceller2/CentOS_CentOS-6/home:fceller2.repo
+cd /etc/yum.repos.d; wget http://download.opensuse.org/repositories/home:/fceller2/CentOS_CentOS-6/home:fceller2.repo; mv home:fceller2.repo centos.home:fceller2.repo
+cd /etc/yum.repos.d; http://download.opensuse.org/repositories/home:/fceller2/RedHat_RHEL-6/home:fceller2.repo; mv home:fceller2.repo rhel.home:fceller2.repo
+
 yum -y install arangodb-gcc54-5.4.0 arangodb-jemalloc-devel arangodb-jemalloc-devel-static glibc-devel python-argparse openssl-devel rpm-build cmake
 
 useradd jenkins -u 1000
