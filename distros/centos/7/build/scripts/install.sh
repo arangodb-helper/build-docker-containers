@@ -21,7 +21,7 @@ wget http://download.opensuse.org/repositories/home:/fceller2/CentOS_7/repodata/
 rpm --import repomd.xml.key
 rm -f repomd.xml.key
 cd /etc/yum.repos.d; wget http://download.opensuse.org/repositories/home:/dothebart:/branches:/devel:/tools:/building/CentOS_7/home:dothebart:branches:devel:tools:building.repo
-wget http://download.opensuse.org/repositories/home:/dothebart:/branches:/devel:/tools:/building/CentOS_7/home:dothebart:branches:devel:tools:building.repo/repodata/repomd.xml.key
+wget http://download.opensuse.org/repositories/home:/dothebart:/branches:/devel:/tools:/building/CentOS_7/repodata/repomd.xml.key
 rpm --import repomd.xml.key
 rm -f repomd.xml.key
 
