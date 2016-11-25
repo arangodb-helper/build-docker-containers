@@ -1,4 +1,4 @@
-FROM fedora:23
+FROM fedora:25
 MAINTAINER Wilfried Goesgens <willi@arangodb.com>
 
 # ARG HTTP_PROXY
@@ -22,3 +22,4 @@ VOLUME ["/jenkins"]
 RUN mkdir -p /net/fileserver
 VOLUME ["/net/fileserver"]
 
+# CMD while /bin/true; do echo '.'; sleep1; done
