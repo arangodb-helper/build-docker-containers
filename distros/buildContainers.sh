@@ -36,6 +36,10 @@ for distro in *; do
            continue
         fi
         buildAndPushContainer ${DOCKER_REGISTRY} ${LABEL} "$distro/$distroversion" build
-        buildAndPushContainer ${DOCKER_REGISTRY} ${LABEL} "$distro/$distroversion" run
+        if test -d $WD/$distro/$distroversion/run; then
+            buildAndPushContainer ${DOCKER_REGISTRY} ${LABEL} "$distro/$distroversion" run
+        else
+            echo "No Run container for ${LABEL}"
+        fi
     done
 done
