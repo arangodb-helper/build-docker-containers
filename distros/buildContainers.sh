@@ -10,7 +10,7 @@ function buildAndPushContainer() {
     #docker build -t ${LABEL}/${BUILDNRUN} https://github.com/arangodb-helper/build-docker-containers.git#master:distros/${DIRECTORY}/${BUILDNRUN}
     docker build -t ${LABEL}/${BUILDNRUN} ${WD}/${DIRECTORY}/${BUILDNRUN}
 
-    docker tag -f ${LABEL}/${BUILDNRUN} ${REGISTRY}/${LABEL}/${BUILDNRUN}
+    docker tag ${LABEL}/${BUILDNRUN} ${REGISTRY}/${LABEL}/${BUILDNRUN}
 
     docker push ${REGISTRY}/${LABEL}/${BUILDNRUN}
 
