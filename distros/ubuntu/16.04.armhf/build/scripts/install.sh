@@ -42,23 +42,19 @@ apt-get update
 apt-get install -y libssl-dev:armhf
 apt-get install -y libssl-dev:arm64
 
-apt-get install -y tar wget bzip2 git cmake automake autoconf build-essential \
-python-argparse python python-lockfile \
-apt-utils apt-transport-https \
-debhelper libjemalloc-dev snapcraft
+apt-get install -y tar wget bzip2 git cmake automake autoconf \
+	python-argparse python python-lockfile \
+	apt-utils apt-transport-https \
+	debhelper snapcraft
 
-apt-get install -y mc nano
+# apt-get install -y mc nano
 apt-get install -y g++-arm-linux-gnueabihf
 apt-get install -y g++-aarch64-linux-gnu
 
-cd /tmp/
-wget http://download.opensuse.org/repositories/home:/fceller2/xUbuntu_14.04/Release.key
-apt-key add - < Release.key
-rm Release.key
-
-echo 'deb http://download.opensuse.org/repositories/home:/fceller2/xUbuntu_14.04/ /' | tee /etc/apt/sources.list.d/arangodbbuild.list
-apt-get update
-apt-get install -y arangodb-gcc54
+# for dpkg-shlibdebs we need this:
+dpkg -r gcc  g++ build-essential
+cd /usr/bin
+ln -s arm-linux-gnueabihf-gcc gcc
 
 useradd jenkins -u 1000
 

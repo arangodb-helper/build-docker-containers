@@ -9,9 +9,8 @@ echo "proxy=${HTTP_PROXY}"
 
 dpkg --add-architecture armhf
 # dpkg --add-architecture arm64
-
 apt-get update
-apt-get install -y tar wget bzip2 automake autoconf python-argparse build-essential apt-utils apt-transport-https debhelper python python-pip debhelper
+apt-get install -y tar wget bzip2 automake autoconf python-argparse apt-utils apt-transport-https debhelper python python-pip debhelper
 
 pip install lockfile
 
@@ -34,6 +33,12 @@ apt-get purge -y libssl-dev
 
 apt-get install -y g++-4.9-arm-linux-gnueabihf g++-arm-linux-gnueabihf gcc-arm-linux-gnueabihf libssl-dev:armhf
 
+# for dpkg-shlibdebs we need this:
+dpkg -r gcc  g++ build-essential
+cd /usr/bin
+ln -s arm-linux-gnueabihf-gcc gcc
+
+ 
 useradd jenkins -u 1000
 
 echo 'PATH=/opt/arangodb/bin/:${PATH}' >> /etc/bashrc
