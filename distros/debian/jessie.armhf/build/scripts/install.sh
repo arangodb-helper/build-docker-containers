@@ -31,7 +31,7 @@ apt-get -t jessie-backports install -y cmake
 
 apt-get purge -y libssl-dev 
 
-apt-get install -y g++-4.9-arm-linux-gnueabihf g++-arm-linux-gnueabihf gcc-arm-linux-gnueabihf libssl-dev:armhf
+apt-get install -y g++-4.9-arm-linux-gnueabihf g++-arm-linux-gnueabihf gcc-arm-linux-gnueabihf libssl-dev:armhf libstdc++6:armhf
 
 # for dpkg-shlibdebs we need this:
 dpkg -r gcc  g++ build-essential
