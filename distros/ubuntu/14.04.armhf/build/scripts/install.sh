@@ -76,3 +76,7 @@ useradd jenkins -u 1000
 
 echo 'PATH=/opt/arangodb/bin/:${PATH}' >> /etc/bashrc
 echo 'PATH=/opt/arangodb/bin/:${PATH}' >> /etc/profile
+
+echo unfucking cmake cpack deb:
+cp /scripts/CPackDeb.cmake /usr/share/cmake-3.2/Modules/CPackDeb.cmake
+
