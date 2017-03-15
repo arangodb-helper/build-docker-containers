@@ -23,6 +23,7 @@ apt-get install -y arangodb-gcc54
 apt-get -t jessie-backports install -y git
 apt-get -t jessie-backports install -y cmake 
 apt-get -t jessie-backports install -y git
+apt-get -t jessie-backports install -y calibre
 
 cd /root
 
