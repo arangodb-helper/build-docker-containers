@@ -37,3 +37,5 @@ mkdir /home/jenkins
 
 echo 'PATH=/opt/arangodb/bin/:${PATH}' >> /etc/bashrc
 echo 'PATH=/opt/arangodb/bin/:${PATH}' >> /etc/profile
+
+rm -f /var/cache/apt/archives/*deb
