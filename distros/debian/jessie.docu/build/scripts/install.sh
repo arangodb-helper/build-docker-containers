@@ -7,7 +7,7 @@ fi
 
 echo "proxy=${HTTP_PROXY}"
 apt-get update
-apt-get install -y tar wget bzip2 make python-argparse python-setuptools build-essential apt-utils apt-transport-https debhelper libjemalloc-dev libssl-dev python python-pip ditaa xvfb libidn11-dev
+apt-get install -y tar wget bzip2 make python-argparse python-setuptools build-essential apt-utils apt-transport-https debhelper libjemalloc-dev libssl-dev python python-pip ditaa xvfb libidn11-dev daemon
 
 pip install lockfile
 
