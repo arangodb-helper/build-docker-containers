@@ -38,4 +38,11 @@ mkdir /home/jenkins
 echo 'PATH=/opt/arangodb/bin/:${PATH}' >> /etc/bashrc
 echo 'PATH=/opt/arangodb/bin/:${PATH}' >> /etc/profile
 
+
+mkdir -p /tmp/1; cd /tmp/1;
+wget https://raw.githubusercontent.com/arangodb/arangodb/devel/Documentation/Books/Manual/book.json
+gitbook install -g
+cd ..
+rm -rf 1
+
 rm -f /var/cache/apt/archives/*deb
