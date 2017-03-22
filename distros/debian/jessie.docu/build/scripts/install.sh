@@ -9,6 +9,13 @@ echo "proxy=${HTTP_PROXY}"
 apt-get update
 apt-get install -y tar wget bzip2 make python-argparse python-setuptools build-essential apt-utils apt-transport-https debhelper libjemalloc-dev libssl-dev python python-pip ditaa xvfb libidn11-dev daemon
 
+# work around broken binfmt_misc support:
+rm -f /usr/bin/ditaa
+printf '#!/bin/bash
+java -jar /usr/share/ditaa/ditaa.jar
+' > /usr/bin/ditaa
+
+
 pip install lockfile
 
 cd /tmp/
