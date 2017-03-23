@@ -30,6 +30,6 @@ apt-get -t jessie-backports install -y cmake
 apt-get -t jessie-backports install -y git
 apt-get -t jessie-backports install -y calibre
 
-rm -f /var/cache/apt/archives/*deb
-rm -f /var/lib/apt/lists/* 
+rm -f /var/cache/apt/archives/*deb || true
+rm -f /var/lib/apt/lists/* || true
 
