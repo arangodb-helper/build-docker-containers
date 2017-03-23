@@ -34,8 +34,10 @@ apt-get -t jessie-backports install -y calibre
 
 cd /root
 
-git clone https://github.com/arangodb-helper/markdown-pp/; cd markdown-pp; python setup.py install
-git clone https://github.com/amperser/proselint.git; cd proselint; python setup.py install 
+git clone https://github.com/arangodb-helper/markdown-pp/; cd markdown-pp; python setup.py install; cd ..; rm -rf proselint
+git clone https://github.com/amperser/proselint.git; cd proselint; python setup.py install; cd ..; rm -rf proselint
+
+
 npm install gitbook-cli -g
 
 sed -i /etc/fstab -e "s;node;jenkins;"
@@ -49,7 +51,6 @@ echo 'PATH=/opt/arangodb/bin/:${PATH}' >> /etc/profile
 mkdir -p /tmp/1; cd /tmp/1;
 wget https://raw.githubusercontent.com/arangodb/arangodb/devel/Documentation/Books/Manual/book.json
 gitbook install -g
-cd ..
-rm -rf 1
 
 rm -f /var/cache/apt/archives/*deb
+rm -f /var/lib/apt/lists/* 
