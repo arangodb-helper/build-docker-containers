@@ -11,8 +11,10 @@ COPY ./scripts/copyFileLockedIfNewer.py /usr/bin/
 ADD ./scripts /scripts
 
 RUN ls -l /scripts/
-# install the build tools
+# install the build tools by apt:
 RUN bash -x ./scripts/install.sh
+# install other stuff: 
+RUN bash -x ./scripts/install_2.sh
 
 # expose the build directory:
 RUN mkdir -p /jenkins

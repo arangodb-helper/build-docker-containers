@@ -16,8 +16,6 @@ java -jar /usr/share/ditaa/ditaa.jar $@
 ' > /usr/bin/ditaa
 chmod a+x /usr/bin/ditaa
 
-pip install lockfile
-
 cd /tmp/
 wget http://download.opensuse.org/repositories/home:/fceller2/Debian_8.0//Release.key
 apt-key add - < Release.key
@@ -32,25 +30,6 @@ apt-get -t jessie-backports install -y cmake
 apt-get -t jessie-backports install -y git
 apt-get -t jessie-backports install -y calibre
 
-cd /root
-
-git clone https://github.com/arangodb-helper/markdown-pp/; cd markdown-pp; python setup.py install; cd ..; rm -rf markdown-pp
-git clone https://github.com/amperser/proselint.git; cd proselint; python setup.py install; cd ..; rm -rf proselint
-
-
-npm install gitbook-cli -g
-
-sed -i /etc/fstab -e "s;node;jenkins;"
-
-mkdir /home/jenkins
-
-echo 'PATH=/opt/arangodb/bin/:${PATH}' >> /etc/bashrc
-echo 'PATH=/opt/arangodb/bin/:${PATH}' >> /etc/profile
-
-
-mkdir -p /tmp/1; cd /tmp/1;
-wget https://raw.githubusercontent.com/arangodb/arangodb/devel/Documentation/Books/Manual/book.json
-gitbook install -g
-
 rm -f /var/cache/apt/archives/*deb
 rm -f /var/lib/apt/lists/* 
+
