@@ -34,7 +34,7 @@ apt-get -t jessie-backports install -y calibre
 
 cd /root
 
-git clone https://github.com/arangodb-helper/markdown-pp/; cd markdown-pp; python setup.py install; cd ..; rm -rf proselint
+git clone https://github.com/arangodb-helper/markdown-pp/; cd markdown-pp; python setup.py install; cd ..; rm -rf markdown-pp
 git clone https://github.com/amperser/proselint.git; cd proselint; python setup.py install; cd ..; rm -rf proselint
 
 
