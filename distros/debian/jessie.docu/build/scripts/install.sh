@@ -12,9 +12,9 @@ apt-get install -y tar wget bzip2 make python-argparse python-setuptools build-e
 # work around broken binfmt_misc support:
 rm -f /usr/bin/ditaa
 printf '#!/bin/bash
-java -jar /usr/share/ditaa/ditaa.jar
+java -jar /usr/share/ditaa/ditaa.jar $@
 ' > /usr/bin/ditaa
-
+chmod a+x /usr/bin/ditaa
 
 pip install lockfile
 
