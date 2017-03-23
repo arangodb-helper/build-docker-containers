@@ -9,7 +9,7 @@ echo "proxy=${HTTP_PROXY}"
 
 apt-get update
 
-apt-get install wget python-setuptools python python-pip python-argparse 
+apt-get install -y wget python-setuptools python python-pip python-argparse 
 
 cd /tmp/
 wget http://download.opensuse.org/repositories/home:/fceller2/Debian_8.0//Release.key
