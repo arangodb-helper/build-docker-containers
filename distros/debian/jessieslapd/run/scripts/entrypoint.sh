@@ -33,7 +33,7 @@ usermod -aG ssl-cert openldap
 chown :ssl-cert /etc/ssl/private/ldap_server.key
 chmod 640       /etc/ssl/private/ldap_server.key
 
-
+cp /etc/ssl/certs/ca_server.pem /cert/
 
 
 
