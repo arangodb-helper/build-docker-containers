@@ -17,6 +17,7 @@ chown -R openldap:openldap /etc/ldap/slapd.d
 chown -R openldap:openldap /var/lib/ldap
 
 # create certs
+mkdir /cert
 mkdir /etc/ssl/templates
 echo "cn = $LDAP_CERT_CN" >> crypto/ldap_server.conf
 
@@ -34,7 +35,6 @@ chown :ssl-cert /etc/ssl/private/ldap_server.key
 chmod 640       /etc/ssl/private/ldap_server.key
 
 cp /etc/ssl/certs/ca_server.pem /cert/
-
 
 
 service slapd start
