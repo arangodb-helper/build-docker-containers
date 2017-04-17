@@ -51,12 +51,12 @@ apt-get install -y tar curl bzip2 git cmake automake autoconf \
 apt-get install -y g++-arm-linux-gnueabihf
 apt-get install -y g++-aarch64-linux-gnu
 apt-get install -y libstdc++6:armhf libldap2-dev:armhf
-# for dpkg-shlibdebs we need this:
-dpkg -r gcc  g++ build-essential
 
 # enable this container to run arm binaries:
-apt-get install qemu binfmt-support qemu-user-static2
+apt-get install -y qemu binfmt-support qemu-user-static2
 
+# for dpkg-shlibdebs we need this:
+dpkg -r gcc  g++ build-essential
 cd /usr/bin
 ln -s arm-linux-gnueabihf-gcc gcc
 

@@ -32,6 +32,9 @@ apt-get purge -y libssl-dev
 
 apt-get install -y g++-4.9-aarch64-linux-gnu g++-aarch64-linux-gnu gcc-aarch64-linux-gnu libssl-dev:arm64 libstdc++6:arm64
 
+# qemu for cross compiling V8
+apt-get install -y qemu binfmt-support qemu-user-static
+
 # for dpkg-shlibdebs we need this:
 dpkg -r gcc  g++ build-essential
 cd /usr/bin

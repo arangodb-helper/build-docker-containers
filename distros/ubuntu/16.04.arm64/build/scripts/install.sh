@@ -48,6 +48,10 @@ apt-get install -y tar curl bzip2 git cmake automake autoconf \
 # apt-get install -y mc nano
 apt-get install -y g++-aarch64-linux-gnu
 apt-get install -y libstdc++6:arm64
+
+# enable this container to run arm binaries:
+apt-get install -y qemu binfmt-support qemu-user-static2
+
 # for dpkg-shlibdebs we need this:
 dpkg -r gcc  g++ build-essential
 cd /usr/bin

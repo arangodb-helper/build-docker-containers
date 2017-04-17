@@ -10,7 +10,7 @@ echo "proxy=${HTTP_PROXY}"
 dpkg --add-architecture armhf
 # dpkg --add-architecture arm64
 apt-get update
-apt-get install -y tar curl bzip2 automake autoconf python-argparse apt-utils apt-transport-https debhelper python python-pip debhelper qemu binfmt-support qemu-user-static libldap2-dev
+apt-get install -y tar curl bzip2 automake autoconf python-argparse apt-utils apt-transport-https debhelper python python-pip debhelper libldap2-dev
 
 pip install lockfile
 
@@ -32,6 +32,9 @@ apt-get -t jessie-backports install -y cmake
 apt-get purge -y libssl-dev 
 
 apt-get install -y g++-4.9-arm-linux-gnueabihf g++-arm-linux-gnueabihf gcc-arm-linux-gnueabihf libssl-dev:armhf libstdc++6:armhf
+
+# qemu for cross compiling V8
+apt-get install -y qemu binfmt-support qemu-user-static
 
 # for dpkg-shlibdebs we need this:
 dpkg -r gcc  g++ build-essential
