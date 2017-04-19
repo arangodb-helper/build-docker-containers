@@ -22,7 +22,7 @@ zypper -n install arangodb-jemalloc
 
 gem install bundler
 
-curl --O https://raw.githubusercontent.com/arangodb/arangodb/devel/UnitTests/HttpInterface/Gemfile
+curl -O https://raw.githubusercontent.com/arangodb/arangodb/devel/UnitTests/HttpInterface/Gemfile
 bundle.ruby2.1
 
 
