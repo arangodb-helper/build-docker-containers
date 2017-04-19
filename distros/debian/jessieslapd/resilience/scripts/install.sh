@@ -8,7 +8,7 @@ fi
 echo "proxy=${HTTP_PROXY}"
 apt-get update
 apt-get install -y \
-        tar wget curl bzip2 \
+        tar curl bzip2 \
         build-essential apt-utils apt-transport-https \
         git cmake automake autoconf \
         libjemalloc1 openssl

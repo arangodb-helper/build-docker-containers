@@ -8,9 +8,9 @@ set -e
 echo "proxy=${HTTP_PROXY}"
 #cat /etc/yum.conf
 # install the bare arangodb dependencies:
-dnf -y install tar bzip2 openssl wget
+dnf -y install tar bzip2 openssl curl
 
-mkdir -p /etc/yum.repos.d; cd /etc/yum.repos.d; wget http://download.opensuse.org/repositories/home:/fceller2/CentOS_CentOS-6/home:fceller2.repo
+mkdir -p /etc/yum.repos.d; cd /etc/yum.repos.d; curl http://download.opensuse.org/repositories/home:/fceller2/CentOS_CentOS-6/home:fceller2.repo
 dnf -y install rubygem-rspec-rails
 
 useradd jenkins -u 1000

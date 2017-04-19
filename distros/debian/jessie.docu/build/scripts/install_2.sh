@@ -18,7 +18,7 @@ echo 'PATH=/opt/arangodb/bin/:${PATH}' >> /etc/profile
 
 
 mkdir -p /tmp/1; cd /tmp/1;
-wget https://raw.githubusercontent.com/arangodb/arangodb/devel/Documentation/Books/Manual/book.json
+curl -O https://raw.githubusercontent.com/arangodb/arangodb/devel/Documentation/Books/Manual/book.json
 gitbook install -g
 
 touch blarg

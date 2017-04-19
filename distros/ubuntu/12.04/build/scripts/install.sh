@@ -14,10 +14,10 @@ apt-get install -y software-properties-common python-software-properties
 add-apt-repository ppa:george-edison55/precise-backports
 
 apt-get update
-apt-get install -y tar wget bzip2 git cmake automake autoconf python-argparse build-essential apt-utils apt-transport-https debhelper libjemalloc-dev libssl-dev python2.7
+apt-get install -y tar curl bzip2 git cmake automake autoconf python-argparse build-essential apt-utils apt-transport-https debhelper libjemalloc-dev libssl-dev python2.7
 
 cd /tmp/
-wget http://download.opensuse.org/repositories/home:/fceller2/xUbuntu_14.04/Release.key
+curl -O http://download.opensuse.org/repositories/home:/fceller2/xUbuntu_14.04/Release.key
 apt-key add - < Release.key
 rm Release.key
 

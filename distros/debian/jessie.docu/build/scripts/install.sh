@@ -9,10 +9,10 @@ echo "proxy=${HTTP_PROXY}"
 
 apt-get update
 
-apt-get install -y wget python-setuptools python python-pip python-argparse 
+apt-get install -y curl python-setuptools python python-pip python-argparse 
 
 cd /tmp/
-wget http://download.opensuse.org/repositories/home:/fceller2/Debian_8.0//Release.key
+curl -O http://download.opensuse.org/repositories/home:/fceller2/Debian_8.0//Release.key
 apt-key add - < Release.key
 rm Release.key
 
@@ -28,7 +28,7 @@ apt-get -t jessie-backports install -y cmake
 apt-get -t jessie-backports install -y git
 apt-get -t jessie-backports install -y calibre
 
-apt-get install -y tar wget bzip2 make build-essential apt-utils apt-transport-https debhelper libjemalloc-dev libssl-dev ditaa xvfb libidn11-dev daemon
+apt-get install -y tar bzip2 make build-essential apt-utils apt-transport-https debhelper libjemalloc-dev libssl-dev ditaa xvfb libidn11-dev daemon
 
 # work around broken binfmt_misc support:
 rm -f /usr/bin/ditaa

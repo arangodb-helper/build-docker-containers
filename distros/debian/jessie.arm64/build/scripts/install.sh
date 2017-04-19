@@ -9,19 +9,19 @@ echo "proxy=${HTTP_PROXY}"
 
 dpkg --add-architecture arm64
 apt-get update
-apt-get install -y tar wget bzip2 automake autoconf python-argparse apt-utils apt-transport-https debhelper python python-pip debhelper
+apt-get install -y tar curl bzip2 automake autoconf python-argparse apt-utils apt-transport-https debhelper python python-pip debhelper
 
 pip install lockfile
 
 cd /tmp/
-wget http://download.opensuse.org/repositories/home:/fceller2/Debian_8.0//Release.key
+curl -O http://download.opensuse.org/repositories/home:/fceller2/Debian_8.0//Release.key
 apt-key add - < Release.key
 rm Release.key
 
 echo 'deb http://ftp.debian.org/debian jessie-backports main' | tee /etc/apt/sources.list.d/backports.list
 echo 'deb http://download.opensuse.org/repositories/home:/fceller2/Debian_8.0/ /' | tee /etc/apt/sources.list.d/arangodbbuild.list
 echo 'deb http://emdebian.org/tools/debian/ jessie main' | tee /etc/apt/sources.list.d/emedian.list
-wget http://emdebian.org/tools/debian/emdebian-toolchain-archive.key
+curl -O http://emdebian.org/tools/debian/emdebian-toolchain-archive.key
 apt-key add - < emdebian-toolchain-archive.key
 
 apt-get update

@@ -45,7 +45,7 @@ apt-get update
 apt-get install -y libssl-dev:armhf
 apt-get install -y libssl-dev:arm64
 
-apt-get install -y tar wget bzip2 git automake autoconf build-essential \
+apt-get install -y tar curl bzip2 git automake autoconf build-essential \
 libpython2.7-stdlib python python-lockfile \
 apt-utils apt-transport-https \
 debhelper libjemalloc-dev
@@ -61,7 +61,7 @@ sudo add-apt-repository -y ppa:george-edison55/cmake-3.x
 #apt-get install -y cmake
 
 cd /tmp/
-wget http://download.opensuse.org/repositories/home:/fceller2/xUbuntu_14.04/Release.key
+curl -O http://download.opensuse.org/repositories/home:/fceller2/xUbuntu_14.04/Release.key
 apt-key add - < Release.key
 rm Release.key
 

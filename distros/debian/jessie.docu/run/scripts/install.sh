@@ -8,7 +8,7 @@ fi
 echo "proxy=${HTTP_PROXY}"
 apt-get update
 apt-get install -y \
-        tar wget bzip2 \
+        tar curl bzip2 \
         build-essential apt-utils apt-transport-https \
         git cmake automake autoconf \
         libjemalloc1 openssl \
@@ -20,7 +20,7 @@ apt-get install -y \
 pip install lockfile
 
 gem install bundler
-wget https://raw.githubusercontent.com/arangodb/arangodb/devel/UnitTests/HttpInterface/Gemfile
+curl -O https://raw.githubusercontent.com/arangodb/arangodb/devel/UnitTests/HttpInterface/Gemfile
 bundle
 
 useradd jenkins -u 1000

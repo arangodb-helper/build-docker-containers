@@ -7,7 +7,7 @@ fi
 
 echo "proxy=${HTTP_PROXY}"
 cat /etc/yum.conf
-yum -y install tar wget bzip2 git make automake autoconf python-argparse openssl-devel rpm-build
+yum -y install tar curl bzip2 git make automake autoconf python-argparse openssl-devel rpm-build
 
 # get the latest gcc:
 # https://www.softwarecollections.org/en/scls/rhscl/devtoolset-3/
@@ -16,12 +16,12 @@ yum -y install tar wget bzip2 git make automake autoconf python-argparse openssl
 # echo "running scl enable: "
 # scl enable devtoolset-3 bash
 
-cd /etc/yum.repos.d; wget http://download.opensuse.org/repositories/home:/fceller2/CentOS_7/home:fceller2.repo
-wget http://download.opensuse.org/repositories/home:/fceller2/CentOS_7/repodata/repomd.xml.key
+cd /etc/yum.repos.d; curl -O http://download.opensuse.org/repositories/home:/fceller2/CentOS_7/home:fceller2.repo
+curl -O http://download.opensuse.org/repositories/home:/fceller2/CentOS_7/repodata/repomd.xml.key
 rpm --import repomd.xml.key
 rm -f repomd.xml.key
-cd /etc/yum.repos.d; wget http://download.opensuse.org/repositories/home:/dothebart:/branches:/devel:/tools:/building/CentOS_7/home:dothebart:branches:devel:tools:building.repo
-wget http://download.opensuse.org/repositories/home:/dothebart:/branches:/devel:/tools:/building/CentOS_7/repodata/repomd.xml.key
+cd /etc/yum.repos.d; curl -O http://download.opensuse.org/repositories/home:/dothebart:/branches:/devel:/tools:/building/CentOS_7/home:dothebart:branches:devel:tools:building.repo
+curl -O http://download.opensuse.org/repositories/home:/dothebart:/branches:/devel:/tools:/building/CentOS_7/repodata/repomd.xml.key
 rpm --import repomd.xml.key
 rm -f repomd.xml.key
 
