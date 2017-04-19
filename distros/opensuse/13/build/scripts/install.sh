@@ -13,11 +13,11 @@ zypper -n addrepo http://download.opensuse.org/repositories/home:/fceller2/openS
 # cmake: 
 zypper -n addrepo http://download.opensuse.org/repositories/home:/dothebart:/branches:/devel:/tools:/building/openSUSE_13.2/home:dothebart:branches:devel:tools:building.repo  
 
-curl -o http://download.opensuse.org/repositories/home:/fceller2/openSUSE_13.1/repodata/repomd.xml.key
+curl -O http://download.opensuse.org/repositories/home:/fceller2/openSUSE_13.1/repodata/repomd.xml.key
 rpm --import repomd.xml.key
 rm -f repomd.xml.key
 # cmake:
-curl -o http://download.opensuse.org/repositories/home:/dothebart:/branches:/devel:/tools:/building/openSUSE_13.2/repodata/repomd.xml.key
+curl -O http://download.opensuse.org/repositories/home:/dothebart:/branches:/devel:/tools:/building/openSUSE_13.2/repodata/repomd.xml.key
 rpm --import repomd.xml.key
 
 zypper -n refresh
