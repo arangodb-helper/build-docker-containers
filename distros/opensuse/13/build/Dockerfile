@@ -1,4 +1,4 @@
-FROM opensuse:13.1
+FROM opensuse:13.2
 MAINTAINER Wilfried Goesgens <willi@arangodb.com>
 
 # ARG HTTP_PROXY
