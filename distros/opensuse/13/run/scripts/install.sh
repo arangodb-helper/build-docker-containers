@@ -10,7 +10,7 @@ echo "proxy=${HTTP_PROXY}"
 zypper -n install -y tar bzip2 openssl curl ruby ca-certificates-mozilla
 
 
-#curl http://download.opensuse.org/repositories/home:/fceller2/openSUSE_13.1/repodata/repomd.xml.key
+#curl -O http://download.opensuse.org/repositories/home:/fceller2/openSUSE_13.1/repodata/repomd.xml.key
 
 #rpm --import repomd.xml.key
 
