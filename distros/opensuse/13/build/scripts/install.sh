@@ -7,17 +7,17 @@ fi
 
 echo "proxy=${HTTP_PROXY}"
 zypper refresh
-zypper -n install tar wget bzip2 git automake autoconf python-argparse ca-certificates-mozilla
+zypper -n install tar curl bzip2 git automake autoconf python-argparse ca-certificates-mozilla
 
 zypper -n addrepo http://download.opensuse.org/repositories/home:/fceller2/openSUSE_13.1/home:fceller2.repo
 # cmake: 
 zypper -n addrepo http://download.opensuse.org/repositories/home:/dothebart:/branches:/devel:/tools:/building/openSUSE_13.2/home:dothebart:branches:devel:tools:building.repo  
 
-wget http://download.opensuse.org/repositories/home:/fceller2/openSUSE_13.1/repodata/repomd.xml.key
+curl -o http://download.opensuse.org/repositories/home:/fceller2/openSUSE_13.1/repodata/repomd.xml.key
 rpm --import repomd.xml.key
 rm -f repomd.xml.key
 # cmake:
-wget http://download.opensuse.org/repositories/home:/dothebart:/branches:/devel:/tools:/building/openSUSE_13.2/repodata/repomd.xml.key
+curl -o http://download.opensuse.org/repositories/home:/dothebart:/branches:/devel:/tools:/building/openSUSE_13.2/repodata/repomd.xml.key
 rpm --import repomd.xml.key
 
 zypper -n refresh
