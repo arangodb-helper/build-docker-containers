@@ -7,7 +7,7 @@ fi
 
 echo "proxy=${HTTP_PROXY}"
 cat /etc/yum.conf
-yum -y install tar curl bzip2 git make automake autoconf python-argparse openssl-devel rpm-build
+yum -y install tar curl bzip2 git make automake autoconf python-argparse openssl-devel rpm-build openldap-devel
 
 # get the latest gcc:
 # https://www.softwarecollections.org/en/scls/rhscl/devtoolset-3/
@@ -26,7 +26,7 @@ rpm --import repomd.xml.key
 rm -f repomd.xml.key
 
 
-yum -y install arangodb-gcc54-5.4.0 arangodb-jemalloc-devel arangodb-jemalloc-devel-static glibc-devel cmake 
+yum -y install arangodb-gcc54-5.4.0 arangodb-jemalloc-devel arangodb-jemalloc-devel-static glibc-devel cmake
 
 
 useradd jenkins -u 1000

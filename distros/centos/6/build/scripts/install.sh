@@ -20,7 +20,7 @@ cd /etc/yum.repos.d
 curl -O http://download.opensuse.org/repositories/home:/fceller2/CentOS_CentOS-6/home:fceller2.repo
 
 
-yum -y install arangodb-gcc54-5.4.0 arangodb-jemalloc-devel arangodb-jemalloc-devel-static glibc-devel python-argparse openssl-devel rpm-build cmake
+yum -y install arangodb-gcc54-5.4.0 arangodb-jemalloc-devel arangodb-jemalloc-devel-static glibc-devel python-argparse openssl-devel rpm-build cmake openldap-devel
 
 useradd jenkins -u 1000
 
