@@ -14,7 +14,7 @@ apt-get install -y \
         libjemalloc1 openssl \
         python-pip \
         ruby-httparty \
-        ruby-multi-xml ruby-thread-safe rubygems-integration ruby-diff-lcs ri ruby-rgen libldap-2.4-2
+        ruby-multi-xml ruby-thread-safe rubygems-integration ruby-diff-lcs ri ruby-rgen
 
 
 pip install lockfile
