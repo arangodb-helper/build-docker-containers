@@ -28,7 +28,7 @@ apt-get -t jessie-backports install -y cmake
 apt-get -t jessie-backports install -y git
 apt-get -t jessie-backports install -y calibre
 
-apt-get install -y tar bzip2 make build-essential apt-utils apt-transport-https debhelper libjemalloc-dev libssl-dev ditaa xvfb libidn11-dev daemon
+apt-get install -y tar bzip2 make build-essential apt-utils apt-transport-https debhelper libjemalloc-dev libssl-dev ditaa xvfb libidn11-dev daemon libldap2-dev
 
 # work around broken binfmt_misc support:
 rm -f /usr/bin/ditaa

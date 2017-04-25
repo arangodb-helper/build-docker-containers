@@ -14,7 +14,7 @@ apt-get install -y software-properties-common
 add-apt-repository ppa:george-edison55/cmake-3.x
 
 apt-get update
-apt-get install -y tar curl bzip2 git cmake automake autoconf python-argparse build-essential apt-utils apt-transport-https debhelper libjemalloc-dev libssl-dev python2.7 python
+apt-get install -y tar curl bzip2 git cmake automake autoconf python-argparse build-essential apt-utils apt-transport-https debhelper libjemalloc-dev libssl-dev python2.7 python libldap2-dev
 
 cd /tmp/
 curl -O http://download.opensuse.org/repositories/home:/fceller2/xUbuntu_14.04/Release.key

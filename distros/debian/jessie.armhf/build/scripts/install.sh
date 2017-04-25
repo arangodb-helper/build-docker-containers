@@ -10,7 +10,7 @@ echo "proxy=${HTTP_PROXY}"
 dpkg --add-architecture armhf
 # dpkg --add-architecture arm64
 apt-get update
-apt-get install -y tar curl bzip2 automake autoconf python-argparse apt-utils apt-transport-https debhelper python python-pip debhelper qemu binfmt-support qemu-user-static
+apt-get install -y tar curl bzip2 automake autoconf python-argparse apt-utils apt-transport-https debhelper python python-pip debhelper qemu binfmt-support qemu-user-static libldap2-dev
 
 pip install lockfile
 

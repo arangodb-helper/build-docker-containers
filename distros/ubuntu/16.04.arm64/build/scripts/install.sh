@@ -43,7 +43,7 @@ apt-get install -y libssl-dev:arm64
 apt-get install -y tar curl bzip2 git cmake automake autoconf \
 	python-argparse python python-lockfile \
 	apt-utils apt-transport-https \
-	debhelper snapcraft
+	debhelper snapcraft libldap2-dev:arm64
 
 # apt-get install -y mc nano
 apt-get install -y g++-aarch64-linux-gnu

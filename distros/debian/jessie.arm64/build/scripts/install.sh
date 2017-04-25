@@ -9,7 +9,7 @@ echo "proxy=${HTTP_PROXY}"
 
 dpkg --add-architecture arm64
 apt-get update
-apt-get install -y tar curl bzip2 automake autoconf python-argparse apt-utils apt-transport-https debhelper python python-pip debhelper
+apt-get install -y tar curl bzip2 automake autoconf python-argparse apt-utils apt-transport-https debhelper python python-pip debhelper libldap2-dev
 
 pip install lockfile
 

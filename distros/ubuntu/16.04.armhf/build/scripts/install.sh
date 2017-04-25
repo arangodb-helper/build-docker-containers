@@ -50,7 +50,7 @@ apt-get install -y tar curl bzip2 git cmake automake autoconf \
 # apt-get install -y mc nano
 apt-get install -y g++-arm-linux-gnueabihf
 apt-get install -y g++-aarch64-linux-gnu
-apt-get install -y libstdc++6:armhf
+apt-get install -y libstdc++6:armhf libldap2-dev:armhf
 # for dpkg-shlibdebs we need this:
 dpkg -r gcc  g++ build-essential
 

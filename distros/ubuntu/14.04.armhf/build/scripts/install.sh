@@ -45,6 +45,9 @@ apt-get update
 apt-get install -y libssl-dev:armhf
 apt-get install -y libssl-dev:arm64
 
+apt-get install -y libldap2-dev:armhf
+apt-get install -y libldap2-dev:arm64
+
 apt-get install -y tar curl bzip2 git automake autoconf build-essential \
 libpython2.7-stdlib python python-lockfile \
 apt-utils apt-transport-https \
