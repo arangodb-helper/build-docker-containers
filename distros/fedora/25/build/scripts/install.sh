@@ -7,7 +7,7 @@ set -e
 
 echo "proxy=${HTTP_PROXY}"
 #cat /etc/yum.conf
-dnf -y install tar curl bzip2 git cmake make automake autoconf python-argparse openssl-devel rpm-build procps-ng
+dnf -y install tar curl bzip2 git cmake make automake autoconf python-argparse openssl-devel openldap-devel rpm-build procps-ng
 
 # get the latest gcc:
 # https://www.softwarecollections.org/en/scls/rhscl/devtoolset-3/
