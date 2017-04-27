@@ -9,6 +9,7 @@ $lib = 'C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\lib\amd64;C:\Prog
 [Environment]::SetEnvironmentVariable("OPENSSL_INCLUDE_DIR", 'C:\Program Files\PackageManagement\NuGet\Packages\openssl.v140.windesktop.msvcstl.dyn.rt-dyn.x64.1.0.2.0\build\native\include', [EnvironmentVariableTarget]::Machine)
 [Environment]::SetEnvironmentVariable("LIB_EAY_RELEASE", 'C:\Program Files\PackageManagement\NuGet\Packages\openssl.v140.windesktop.msvcstl.dyn.rt-dyn.x64.1.0.2.0\lib\native\v140\windesktop\msvcstl\dyn\rt-dyn\x64\release\libeay32.lib', [EnvironmentVariableTarget]::Machine)
 [Environment]::SetEnvironmentVariable("SSL_EAY_RELEASE", 'C:\Program Files\PackageManagement\NuGet\Packages\openssl.v140.windesktop.msvcstl.dyn.rt-dyn.x64.1.0.2.0\lib\native\v140\windesktop\msvcstl\dyn\rt-dyn\x64\release\ssleay32.lib', [EnvironmentVariableTarget]::Machine)
+[Environment]::SetEnvironmentVariable("LIB_EAY_RELEASE_DLL", 'C:\Program Files\PackageManagement\NuGet\Packages\openssl.v140.windesktop.msvcstl.dyn.rt-dyn.x64.1.0.2.0\lib\native\v140\windesktop\msvcstl\dyn\rt-dyn\x64\release\libeay32.dll', [EnvironmentVariableTarget]::Machine)
+[Environment]::SetEnvironmentVariable("SSL_EAY_RELEASE_DLL", 'C:\Program Files\PackageManagement\NuGet\Packages\openssl.v140.windesktop.msvcstl.dyn.rt-dyn.x64.1.0.2.0\lib\native\v140\windesktop\msvcstl\dyn\rt-dyn\x64\release\ssleay32.dll', [EnvironmentVariableTarget]::Machine)
 [Environment]::SetEnvironmentVariable("_IsNativeEnvironment", 'true', [EnvironmentVariableTarget]::Machine)
 
-# cmake .. -G "Visual Studio 14 2015 Win64" -DOPENSSL_INCLUDE_DIR="$env:OPENSSL_INCLUDE_DIR" -DLIB_EAY_RELEASE="$env:LIB_EAY_RELEASE" -DSSL_EAY_RELEASE="$env:SSL_EAY_RELEASE" -DOPENSSL_USE_STATIC_LIBS=On

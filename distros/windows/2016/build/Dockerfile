@@ -14,7 +14,8 @@ RUN choco install -y python2
 # lol...without specifying a fixed version this failed fetching dependent packages...
 RUN Install-Package -RequiredVersion 1.0.2 openssl
 
-COPY scripts\fix.ps1 C:\fix.ps1
+COPY scripts/fix.ps1 C:\fix.ps1
 RUN & C:\fix.ps1
+COPY scripts/build.ps1 c:\build.ps1
 
 CMD ["powershell"]
