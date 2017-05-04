@@ -50,7 +50,7 @@ apt-get install -y g++-aarch64-linux-gnu
 apt-get install -y libstdc++6:arm64
 
 # enable this container to run arm binaries:
-apt-get install -y qemu binfmt-support qemu-user-static2
+apt-get install -y qemu binfmt-support qemu-user-static
 
 # for dpkg-shlibdebs we need this:
 dpkg -r gcc  g++ build-essential
