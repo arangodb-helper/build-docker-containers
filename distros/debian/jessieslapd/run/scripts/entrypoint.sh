@@ -41,5 +41,7 @@ service slapd start
 
 echo $LDAP_CERT_CN
 
+echo "Press CTRL+P CTRL+Q to release the shell."
+
 # stimulate docker a bit
 while true; do sleep 60; done
