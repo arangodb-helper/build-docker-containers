@@ -1,9 +1,10 @@
 #!/bin/bash
+set +e
 pip install lockfile
 
 cd /root
 
-git clone https://github.com/arangodb-helper/markdown-pp/; cd markdown-pp; python setup.py install; cd ..; rm -rf markdown-pp
+git clone https://github.com/arangodb-helper/markdown-pp/&& cd markdown-pp; python setup.py install; cd ..; rm -rf markdown-pp
 git clone https://github.com/amperser/proselint.git; cd proselint; python setup.py install; cd ..; rm -rf proselint
 
 
@@ -17,8 +18,13 @@ echo 'PATH=/opt/arangodb/bin/:${PATH}' >> /etc/bashrc
 echo 'PATH=/opt/arangodb/bin/:${PATH}' >> /etc/profile
 
 
-mkdir -p /tmp/1; cd /tmp/1;
-curl -O https://raw.githubusercontent.com/arangodb/arangodb/devel/Documentation/Books/Manual/book.json
-gitbook install -g
+for i in 3.1 3.2 devel; do
+    mkdir -p /tmp/$i
+    cd /tmp/$i
+    curl -O https://raw.githubusercontent.com/arangodb/arangodb/$i/Documentation/Books/Manual/book.json
+    gitbook install -g
+    pwd
+    touch blarg
+done
 
-touch blarg
+cp -a /tmp/devel /tmp/1
