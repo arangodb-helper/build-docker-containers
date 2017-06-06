@@ -7,5 +7,6 @@ To update the public available image run:
 
 On the Jenkins hosts the docker image needs to be available under another tag: 
 
-    docker tag 192.168.0.1/debianjessiedocu/build 192.168.0.1/arangodb/documentation-builder
+    docker pull arangodb/documentation-builder
+    docker tag arangodb/documentation-builder 192.168.0.1/arangodb/documentation-builder
     docker push 192.168.0.1/arangodb/documentation-builder 
