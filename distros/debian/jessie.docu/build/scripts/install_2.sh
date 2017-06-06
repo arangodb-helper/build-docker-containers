@@ -25,7 +25,7 @@ for i in 3.1 3.2 devel; do
         curl -O https://raw.githubusercontent.com/arangodb/arangodb/$i/Documentation/Books/${book}/book.json
         gitbook install -g
     done
-    https://raw.githubusercontent.com/arangodb/Cookbook/master/recipes/book.json
+    curl -O https://raw.githubusercontent.com/arangodb/Cookbook/master/recipes/book.json
     gitbook install -g
     pwd
     touch blarg
