@@ -1,4 +1,4 @@
-FROM debian:jessie
+FROM debian:stretch
 MAINTAINER Wilfried Goesgens <willi@arangodb.com>
 
 # ARG HTTP_PROXY
