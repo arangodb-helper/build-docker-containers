@@ -7,7 +7,7 @@ fi
 
 echo "proxy=${HTTP_PROXY}"
 apt-get update
-apt-get install -y tar curl bzip2 automake autoconf python-argparse build-essential apt-utils apt-transport-https debhelper libjemalloc-dev libssl-dev python python-pip libldap2-dev gcc-6 git cmake 
+apt-get install -y tar curl bzip2 zlib1g-dev automake autoconf python-argparse build-essential apt-utils apt-transport-https debhelper libjemalloc-dev libssl-dev python python-pip libldap2-dev gcc-6 git cmake 
 
 pip install lockfile
 
