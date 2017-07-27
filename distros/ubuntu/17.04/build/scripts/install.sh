@@ -7,16 +7,7 @@ fi
 
 echo "proxy=${HTTP_PROXY}"
 apt-get update
-apt-get install -y tar curl bzip2 git cmake automake autoconf python-argparse build-essential apt-utils apt-transport-https debhelper libjemalloc-dev libssl-dev python python-lockfile snapcraft libldap2-dev
-
-cd /tmp/
-curl -O http://download.opensuse.org/repositories/home:/fceller2/xUbuntu_14.04/Release.key
-apt-key add - < Release.key
-rm Release.key
-
-# echo 'deb http://download.opensuse.org/repositories/home:/fceller2/xUbuntu_14.04/ /' | tee /etc/apt/sources.list.d/arangodbbuild.list
-apt-get update
-apt-get install -y arangodb-gcc54
+apt-get install -y tar curl bzip2 git cmake automake autoconf python-argparse build-essential apt-utils apt-transport-https debhelper libjemalloc-dev libssl-dev python python-lockfile snapcraft libldap2-dev gcc-6
 
 useradd jenkins -u 1000
 
