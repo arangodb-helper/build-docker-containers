@@ -31,4 +31,9 @@ for i in 3.1 3.2 devel; do
     touch blarg
 done
 
+mv ~/.gitbook/ /usr/local/nodeshit/gitbook; chmod a+rwX -R /usr/local/nodeshit/gitbook
+mv ~/.npm/ /usr/local/nodeshit/npm;         chmod a+rwX -R /usr/local/nodeshit/npm
+
+ln -s /usr/local/nodeshit/gitbook ~/.gitbook
+ln -s /usr/local/nodeshit/npm ~/.npm
 cp -a /tmp/devel /tmp/1
