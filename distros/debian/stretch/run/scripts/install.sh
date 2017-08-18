@@ -15,7 +15,7 @@ apt-get install -y \
         python-pip \
         ruby-httparty \
         ruby-multi-xml ruby-thread-safe rubygems-integration ruby-diff-lcs ri ruby-rgen \
-        systemd
+        systemd systemd-sysv
 
 
 pip install lockfile
