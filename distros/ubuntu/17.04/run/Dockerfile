@@ -1,6 +1,8 @@
 FROM ubuntu:17.04
 MAINTAINER Wilfried Goesgens <willi@arangodb.com>
 
+CMD /lib/systemd/systemd --system
+
 # ARG HTTP_PROXY
 # for local installation, uncomment
 # ADD ./arangodb /install

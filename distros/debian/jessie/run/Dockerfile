@@ -1,6 +1,8 @@
 FROM debian:jessie
 MAINTAINER Wilfried Goesgens <willi@arangodb.com>
 
+CMD cat
+
 # ARG HTTP_PROXY
 # for local installation, uncomment
 # ADD ./arangodb /install

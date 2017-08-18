@@ -17,7 +17,8 @@ apt-get install -y \
         gdb \
         \
         ruby-httparty \
-        ruby-multi-xml ruby-thread-safe rubygems-integration ruby-diff-lcs ri ruby-rgen
+        ruby-multi-xml ruby-thread-safe rubygems-integration ruby-diff-lcs ri ruby-rgen\
+        systemd systemd-sysv
 
 gem install bundler
 curl -O https://raw.githubusercontent.com/arangodb/arangodb/devel/UnitTests/HttpInterface/Gemfile
