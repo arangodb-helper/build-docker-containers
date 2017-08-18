@@ -1,7 +1,7 @@
 FROM debian:stretch
 MAINTAINER Wilfried Goesgens <willi@arangodb.com>
 
-CMD /sbin/init
+CMD /lib/systemd/systemd
 
 # ARG HTTP_PROXY
 # for local installation, uncomment
