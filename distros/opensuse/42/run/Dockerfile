@@ -1,7 +1,7 @@
 FROM opensuse:42.2
 MAINTAINER Wilfried Goesgens <willi@arangodb.com>
 
-CMD cat
+CMD while :; do read; done
 
 # ARG HTTP_PROXY
 # for local installation, uncomment
