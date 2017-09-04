@@ -5,6 +5,9 @@ if test -n "${HTTP_PROXY}"; then
     echo "proxy=${HTTP_PROXY}" >> /etc/yum.conf
 fi
 
+# Unfuck debian container:
+rm -f /usr/bin/chmod /usr/bin/chown
+
 echo "proxy=${HTTP_PROXY}"
 apt-get update
 apt-get install -y \

@@ -6,6 +6,10 @@ if test -n "${HTTP_PROXY}"; then
 fi
 
 echo "proxy=${HTTP_PROXY}"
+
+# Unfuck debian container:
+rm -f /usr/bin/chmod /usr/bin/chown
+
 apt-get update
 apt-get install -y tar curl bzip2 zlib1g-dev automake autoconf python-argparse build-essential \
     apt-utils apt-transport-https debhelper libjemalloc-dev libssl-dev python python-pip \
