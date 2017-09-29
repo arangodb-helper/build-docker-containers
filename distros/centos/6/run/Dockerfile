@@ -1,7 +1,7 @@
 FROM centos:6.6
 MAINTAINER Wilfried Goesgens <willi@arangodb.com>
 
-CMD while :; do read; done
+CMD sleep 200m
 
 # ARG HTTP_PROXY
 # for local installation, uncomment
