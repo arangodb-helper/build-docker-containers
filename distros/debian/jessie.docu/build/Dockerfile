@@ -49,7 +49,7 @@ RUN echo 'PATH=/opt/arangodb/bin/:${PATH}' >> /etc/bashrc
 RUN echo 'PATH=/opt/arangodb/bin/:${PATH}' >> /etc/profile
 
 
-RUN for i in 3.1 3.2 devel; do \
+RUN for i in 3.1 3.2 3.3 devel; do \
     mkdir -p /tmp/$i; \
     cd /tmp/$i; \
     for book in AQL HTTP Manual; do \
