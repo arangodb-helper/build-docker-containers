@@ -16,6 +16,7 @@ apt-get install -y \
         git cmake automake autoconf \
         libjemalloc1 libldap-2.4-2 openssl \
         python-pip \
+        gdb \
         ruby-httparty \
         ruby-multi-xml ruby-thread-safe rubygems-integration ruby-diff-lcs ri ruby-rgen \
         systemd systemd-sysv

@@ -8,7 +8,7 @@ fi
 echo "proxy=${HTTP_PROXY}"
 apt-get update
 
-apt-get install -y tar curl bzip2 git cmake automake autoconf python-argparse build-essential apt-utils apt-transport-https libjemalloc1 openssl ruby-rspec rubygems ruby-diff-lcs ri
+apt-get install -y tar curl bzip2 git cmake automake autoconf python-argparse build-essential apt-utils apt-transport-https libjemalloc1 openssl ruby-rspec rubygems ruby-diff-lcs ri gdb
 apt-get install -y ruby 1.9.3
 #cd /etc/alternatives
 #ln -sf /usr/bin/ruby1.9.3 ruby

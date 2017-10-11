@@ -7,7 +7,7 @@ fi
 
 echo "proxy=${HTTP_PROXY}"
 # install the bare arangodb dependencies:
-zypper -n install -y tar bzip2 openssl curl ruby ca-certificates-mozilla
+zypper -n install -y tar bzip2 openssl curl ruby ca-certificates-mozilla gdb
 
 
 #curl -O http://download.opensuse.org/repositories/home:/fceller2/openSUSE_13.1/repodata/repomd.xml.key
