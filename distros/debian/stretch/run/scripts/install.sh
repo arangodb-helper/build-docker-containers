@@ -5,11 +5,11 @@ if test -n "${HTTP_PROXY}"; then
     echo "proxy=${HTTP_PROXY}" >> /etc/yum.conf
 fi
 
-# Unfuck debian container:
-rm -f /usr/bin/chmod /usr/bin/chown
 
 echo "proxy=${HTTP_PROXY}"
-apt-get update
+apt-get update 
+apt-get install -y --allow-unauthenticated coreutils ca-certificates
+
 apt-get install -y \
         tar curl bzip2 \
         build-essential apt-utils apt-transport-https \
