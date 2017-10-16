@@ -7,7 +7,7 @@ fi
 
 echo "proxy=${HTTP_PROXY}"
 # install the bare arangodb dependencies:
-zypper -n install tar bzip2 openssl curl ruby ca-certificates-mozilla jemalloc gdb
+zypper -n install tar bzip2 openssl curl ruby ca-certificates-mozilla jemalloc gdb glibc-locale
 
 gem install bundler
 
