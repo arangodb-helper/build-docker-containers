@@ -39,7 +39,7 @@ RUN pip install lockfile
 RUN cd /root; git clone https://github.com/arangodb-helper/markdown-pp/&& cd markdown-pp; python setup.py install; cd ..; rm -rf markdown-pp
 RUN cd /root; git clone https://github.com/amperser/proselint.git; cd proselint; python setup.py install; cd ..; rm -rf proselint
 
-RUN npm install gitbook-cli -g
+RUN npm install gitbook-cli grunt iltorb -g
 
 RUN sed -i /etc/fstab -e "s;node;jenkins;"
 
