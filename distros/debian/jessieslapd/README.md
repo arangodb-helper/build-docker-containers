@@ -17,3 +17,14 @@ Example:
     -v /home/user/ldapcacert/:/cert/ -p 127.0.0.1:5555:389 jessie-ldap
 
 This command start a container with an ldap server listening on 127.0.0.1:5555. For your ldap client you can use the ca certificate that is in /home/user/ldapcacert/.
+
+
+
+Run the ldap test
+
+    cd arangodb-repo-base
+    ./scripts/unittest ldap  --ldapHost {hostIP} --ldapPort {hostPort} --caCertFilePath {pathToLdapCACert}
+    
+    
+this will run the test located at
+https://github.com/arangodb/arangodb/blob/devel/js/client/modules/%40arangodb/testsuites/ldap.js
