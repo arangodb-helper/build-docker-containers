@@ -1,4 +1,13 @@
 
+first build the image from the `Dockerfile`
+
+    cd build-docker-containers/distros/debian/jessieslapd/run
+    docker build -t {yourImageName} .
+    
+    
+
+
+
 the command
 
     docker run -d -e "LDAP_CERT_CN={commonName}" \
