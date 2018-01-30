@@ -13,7 +13,7 @@ the command
     docker run -d -e "LDAP_CERT_CN={commonName}" \
     -v {hostPathToAnyDirectoryForCACertReceiving}:/cert/ -p {hostIP}:{hostPort}:389 {imagename}
     
-starts a container (instance) of the image `imagename`. A LDAP server with the CN `commonName` is listening on the host port `hostPort`s IP `hostIP`. The CA cert is copied to `hostPathForCACertReceiving`.
+starts a container (instance) of the image `imagename`. A LDAP server with the CN `commonName` is listening on the host port `hostPort`s IP `hostIP`. The CA cert is copied to `hostPathToAnyDirectoryForCACertReceiving`.
 
 Note:
 
