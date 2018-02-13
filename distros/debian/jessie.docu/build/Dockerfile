@@ -49,12 +49,16 @@ RUN echo 'PATH=/opt/arangodb/bin/:${PATH}' >> /etc/bashrc
 RUN echo 'PATH=/opt/arangodb/bin/:${PATH}' >> /etc/profile
 
 
-RUN for i in 3.0 3.1 3.2 3.3 devel; do \
+RUN for i in 3.0 3.1 3.2 3.3 devel; do  \
     mkdir -p /tmp/$i; \
     cd /tmp/$i; \
     for book in AQL HTTP Manual Cookbook; do \
         curl -O https://raw.githubusercontent.com/arangodb/arangodb/$i/Documentation/Books/${book}/book.json; \
+        sed -i "s;@.*@;0;g" book.json; \
+	cat book.json; \
         gitbook install -g; \
+        echo "now its here."; \
+        rm book.json; \
     done; \
     curl -O https://raw.githubusercontent.com/arangodb/Cookbook/master/recipes/book.json; \
     gitbook install -g; \
