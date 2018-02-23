@@ -1,4 +1,4 @@
-FROM centos:6.6
+FROM centos:6
 MAINTAINER Wilfried Goesgens <willi@arangodb.com>
 
 # ARG HTTP_PROXY
