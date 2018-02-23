@@ -1,10 +1,19 @@
 
+first build the image from the `Dockerfile`
+
+    cd build-docker-containers/distros/debian/jessieslapd/run
+    docker build -t {yourImageName} .
+    
+    
+
+
+
 the command
 
     docker run -d -e "LDAP_CERT_CN={commonName}" \
-    -v {hostPathForCACertReceiving}:/cert/ -p {hostIP}:{hostPort}:389 {imagename}
+    -v {hostPathToAnyDirectoryForCACertReceiving}:/cert/ -p {hostIP}:{hostPort}:389 {imagename}
     
-starts a container (instance) of the image `imagename`. A LDAP server with the CN `commonName` is listening on the host port `hostPort`s IP `hostIP`. The CA cert is copied to `hostPathForCACertReceiving`.
+starts a container (instance) of the image `imagename`. A LDAP server with the CN `commonName` is listening on the host port `hostPort`s IP `hostIP`. The CA cert is copied to `hostPathToAnyDirectoryForCACertReceiving`.
 
 Note:
 
