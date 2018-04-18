@@ -52,10 +52,15 @@ RUN echo 'PATH=/opt/arangodb/bin/:${PATH}' >> /etc/profile
 RUN for i in 3.0 3.1 3.2 3.3 devel; do  \
     mkdir -p /tmp/$i; \
     cd /tmp/$i; \
-    for book in AQL HTTP Manual Cookbook; do \
-        curl -O https://raw.githubusercontent.com/arangodb/arangodb/$i/Documentation/Books/${book}/book.json; \
+    for book in AQL HTTP Manual Cookbook Drivers; do \
+        curl --fail -O https://raw.githubusercontent.com/arangodb/arangodb/$i/Documentation/Books/${book}/book.json; \
+        exitcode=$?; \
+        if test $exitcode != 0; then \
+          echo "Failed to fetch book.json for ${i} ${book}, skipping."; \
+          continue; \
+        fi; \
         sed -i "s;@.*@;0;g" book.json; \
-	cat book.json; \
+        cat book.json; \
         gitbook install -g; \
         echo "now its here."; \
         rm book.json; \
