@@ -48,6 +48,7 @@ RUN mkdir /home/jenkins
 RUN echo 'PATH=/opt/arangodb/bin/:${PATH}' >> /etc/bashrc
 RUN echo 'PATH=/opt/arangodb/bin/:${PATH}' >> /etc/profile
 
+ARG CACHE_DATE=pass_buildarg_to_invalidate
 
 RUN for i in 2.8 3.0 3.1 3.2 3.3 devel; do  \
     mkdir -p /tmp/$i; \
