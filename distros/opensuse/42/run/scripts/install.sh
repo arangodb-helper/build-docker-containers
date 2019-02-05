@@ -11,7 +11,7 @@ zypper -n install tar bzip2 openssl curl ruby ca-certificates-mozilla jemalloc g
 
 gem install bundler
 
-curl -O https://raw.githubusercontent.com/arangodb/arangodb/devel/UnitTests/HttpInterface/Gemfile
+curl -O https://raw.githubusercontent.com/arangodb/arangodb/devel/tests/rb/HttpInterface/Gemfile
 bundle.ruby2.1
 
 touch /etc/rc.status

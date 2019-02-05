@@ -21,7 +21,7 @@ apt-get install -y \
         systemd systemd-sysv
 
 gem install bundler
-curl -O https://raw.githubusercontent.com/arangodb/arangodb/devel/UnitTests/HttpInterface/Gemfile
+curl -O https://raw.githubusercontent.com/arangodb/arangodb/devel/tests/rb/HttpInterface/Gemfile
 bundle
 
 useradd jenkins -u 1000

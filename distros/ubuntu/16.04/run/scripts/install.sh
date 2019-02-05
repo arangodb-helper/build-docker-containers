@@ -20,7 +20,7 @@ apt-get install -y \
         ruby-multi-xml ruby-thread-safe rubygems-integration ruby-diff-lcs ri ruby-rgen
 
 gem install bundler
-curl -O https://raw.githubusercontent.com/arangodb/arangodb/devel/UnitTests/HttpInterface/Gemfile
+curl -O https://raw.githubusercontent.com/arangodb/arangodb/devel/tests/rb/HttpInterface/Gemfile
 bundle
 
 useradd jenkins -u 1000
