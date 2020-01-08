@@ -1,4 +1,11 @@
 # build-docker-containers
+
+This Repository is used up to ArangoDB 3.3
+
+
+
+
+
 This repository contains bunch of docker containers bringing the neccessary tools to compile ArangoDB for a linux distribution.
 
 #distros
